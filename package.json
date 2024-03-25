@@ -7,7 +7,12 @@
     "url": "https://tomeraberba.ch"
   },
   "description": "Partitions an interval as evenly as possible.",
-  "keywords": [],
+  "keywords": [
+    "partition",
+    "interval",
+    "evenly",
+    "divide"
+  ],
   "homepage": "https://github.com/TomerAberbach/partition-interval",
   "repository": "TomerAberbach/partition-interval",
   "bugs": {
