@@ -24,6 +24,9 @@ const getIntervalArb = (numberArb: fc.Arbitrary<number> = fc.integer()) =>
     .map(([start, end]): [number, number] =>
       start > end ? [end, start] : [start, end],
     )
+const nonIntegerArb = fc
+  .double()
+  .filter(number => !Number.isSafeInteger(number))
 
 test.prop([
   fc
@@ -68,7 +71,7 @@ test.prop([
 const computeIntervalSize = ([start, end]: readonly [number, number]): number =>
   end - start + 1
 
-test.prop([getIntervalArb(fc.double()), fc.integer()])(
+test.prop([getIntervalArb(nonIntegerArb), fc.integer()])(
   `partitionInterval throws for non-integer interval`,
   (interval, partitions) => {
     expect(() => partitionInterval(interval, partitions)).toThrow(TypeError)
@@ -85,7 +88,7 @@ test.prop([
   },
 )
 
-test.prop([getIntervalArb(), fc.double()])(
+test.prop([getIntervalArb(), nonIntegerArb])(
   `partitionInterval throws for non-integer partitions`,
   (interval, partitions) => {
     expect(() => partitionInterval(interval, partitions)).toThrow(TypeError)
