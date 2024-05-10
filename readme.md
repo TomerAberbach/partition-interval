@@ -9,11 +9,11 @@
   <a href="https://github.com/TomerAberbach/partition-interval/actions">
     <img src="https://github.com/TomerAberbach/partition-interval/workflows/CI/badge.svg" alt="CI" />
   </a>
-  <a href="https://unpkg.com/partition-interval/dist/index.min.js">
-    <img src="http://img.badgesize.io/https://unpkg.com/partition-interval/dist/index.min.js?compression=gzip&label=gzip" alt="gzip size" />
+  <a href="https://unpkg.com/partition-interval/dist/index.js">
+    <img src="https://deno.bundlejs.com/?q=partition-interval&badge" alt="gzip size" />
   </a>
-  <a href="https://unpkg.com/partition-interval/dist/index.min.js">
-    <img src="http://img.badgesize.io/https://unpkg.com/partition-interval/dist/index.min.js?compression=brotli&label=brotli" alt="brotli size" />
+  <a href="https://unpkg.com/partition-interval/dist/index.js">
+    <img src="https://deno.bundlejs.com/?q=partition-interval&config={%22compression%22:{%22type%22:%22brotli%22}}&badge" alt="brotli size" />
   </a>
 </div>
 
