@@ -1,6 +1,7 @@
-import { fc, test } from 'tomer'
+import { fc, test } from '@fast-check/vitest'
 import { map, pipe, sum } from 'lfi'
-import partitionInterval from '../src/index.js'
+import { expect } from 'vitest'
+import partitionInterval from './index.js'
 
 const getIntervalArb = (numberArb: fc.Arbitrary<number> = fc.integer()) =>
   fc
